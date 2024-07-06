@@ -10,16 +10,17 @@
   box-shadow: 0px 0px 2px gray;
   color: gray;
   margin-top: 20px;
+  height: auto;
+  margin-bottom: 90px;
 }
 
 .outerBox h2 {
   font-weight: 600;
   margin-top: 5px;
-  font-size: 24px;
+  font-size: 30px;
 }
 .outerBox p {
-  margin-top: 5px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .imageUploadBox {
@@ -38,6 +39,10 @@
 .imageLogoAndText img {
   max-width: 100%;
   max-height: 200px;
+}
+
+.imageLogoAndText p {
+  font-size: 14px;
 }
 
 .imagePreview {

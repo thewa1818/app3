@@ -6,9 +6,9 @@
   opacity: 0.8; /* 背景画像の透明度を設定 */
 }
 
-.title {
+.homeTitle {
   font-size: 48px; /* より大きなサイズに変更 */
-  padding-top: 200px; /* 間隔を調整 */
+  padding-top: 200px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -55,7 +55,7 @@
 /* fiestHome.css */
 .hero-section {
   background-color: rgba(0, 0, 0, 0.5); /* 背景色と透明度を設定 */
-  padding: 50px;
+  /* padding: 50px; */
   text-align: center;
 }
 
@@ -91,6 +91,7 @@
   background-color: rgba(0, 0, 0, 0.5); /* 背景色と透明度を設定 */
   padding: 50px;
   text-align: center;
+  padding-bottom: 100px;
 }
 
 .admin-overlay {
@@ -98,10 +99,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.admin-buttons {
-  margin-top: 20px;
 }
 
 .admin-buttons .MuiButton-root {
