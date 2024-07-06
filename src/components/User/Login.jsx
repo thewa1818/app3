@@ -66,7 +66,7 @@ const Login = () => {
             sx={{ mt: 2 }}
             disabled={loading} // ローディング中はボタンを無効化
           >
-            {loading ? <CircularProgress size={24} /> : "登録する"}
+            {loading ? <CircularProgress size={24} /> : "ログイン"}
           </Button>
           {error && (
             <Typography variant="body2" color="error" sx={{ mt: 2 }}>
