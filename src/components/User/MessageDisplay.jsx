@@ -58,7 +58,7 @@ const MessageDisplay = ({ post }) => {
         </Typography>
       </div>
       {showReply && (
-        <List style={{ borderTop: "1px solid gray" }}>
+        <List style={{ borderTop: "1px solid gra" }}>
           {loading ? (
             <ListItem>
               <ListItemText primary="読み込み中..." />
@@ -74,7 +74,8 @@ const MessageDisplay = ({ post }) => {
                 <ListItemText
                   primary={
                     <Typography variant="body2" color="textSecondary">
-                      <b>管理者の返信:</b> {message.message}
+                      <b>管理者の返信:</b> <br />
+                      {message.message}
                     </Typography>
                   }
                   secondary={

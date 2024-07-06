@@ -119,7 +119,7 @@ const AdminForm = () => {
       setLocation("");
       setStartDate("");
       setEndDate("");
-      navigate("/admin/kanri");
+      navigate("/admin/home"); // ここを変更
     } catch (error) {
       console.error("Error adding document: ", error);
       alert("データの登録に失敗しました。");

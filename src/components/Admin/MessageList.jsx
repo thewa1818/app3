@@ -12,6 +12,7 @@ import {
   Snackbar,
   Divider,
   Typography,
+  Box,
 } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ModalChat from "./ModalChat";
@@ -112,36 +113,44 @@ const MessageList = ({ postId, open, handleClose, userMessage }) => {
             ) : (
               messages.map((message) => (
                 <React.Fragment key={message.id}>
-                  <ListItem alignItems="flex-start">
-                    <Avatar sx={{ mr: 1 }}>
-                      <AccountCircleIcon />
-                    </Avatar>
-                    <ListItemText
-                      primary={message.message}
-                      secondary={
-                        <React.Fragment>
-                          <Typography
-                            component="span"
-                            variant="body2"
-                            color="text.primary"
-                          >
-                            メールアドレス: {message.email}
+                  <ListItem
+                    alignItems="flex-start"
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Box
+                      sx={{ display: "flex", alignItems: "center", flex: 1 }}
+                    >
+                      <Avatar sx={{ mr: 1 }}>
+                        <AccountCircleIcon />
+                      </Avatar>
+                      <ListItemText
+                        primary={message.message}
+                        secondary={
+                          <React.Fragment>
+                            <Typography
+                              component="span"
+                              variant="body2"
+                              color="text.primary"
+                            >
+                              メールアドレス: {message.email}
+                              <br />
+                              性別: {message.gender}
+                              <br />
+                              年齢: {message.age}
+                              <br />
+                            </Typography>
                             <br />
-                            性別: {message.gender}
-                            <br />
-                            年齢: {message.age}
-                            <br />
-                          </Typography>
-                          <br />
-                          {message.createdAt &&
-                            message.createdAt.toDate().toLocaleString()}
-                        </React.Fragment>
-                      }
-                    />
+                            {message.createdAt &&
+                              message.createdAt.toDate().toLocaleString()}
+                          </React.Fragment>
+                        }
+                      />
+                    </Box>
                     {!message.adminMessage && (
                       <Button
                         variant="outlined"
                         onClick={() => handleReply(message.email)}
+                        sx={{ ml: 2 }}
                       >
                         返信する
                       </Button>

@@ -72,7 +72,7 @@ const ContactButton = ({ postId }) => {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen} sx={{ width: 140 }}>
         問い合わせする
       </Button>
       <Dialog open={open} onClose={handleClose}>

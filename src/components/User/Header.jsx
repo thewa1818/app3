@@ -22,7 +22,7 @@ const Header = () => {
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          My Site
+          らくらく移住
         </Typography>
         <Button color="inherit" onClick={handleLogout}>
           ログアウト
